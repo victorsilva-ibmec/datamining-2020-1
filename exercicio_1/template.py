@@ -1,0 +1,1 @@
+"""Template para exercicio 1."""
