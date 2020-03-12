@@ -1,0 +1,39 @@
+
+
+def Exercicio_8(valor):
+    parteInteira = int(valor)
+    parteFracionada = valor - parteInteira 
+    print('\nInteiro: ' + str(parteInteira) + '\nFracionado: ' +  str(parteFracionada))
+
+def Exercicio_11():
+    lstid = []
+    lstpeso = []
+    for i in range(7):
+        identidade,peso = input("ID e peso (separados por :): \n").split(':')
+        lstid.append(identidade)
+        lstpeso.append(float(peso))
+    mais_pesado = list(max(zip(lstpeso,lstid)))
+    print("\nO boi mais pesado é o de ID: ", str(mais_pesado[1]), "e peso: ", str(mais_pesado[0]), "\n")
+
+def Exercicio_12():
+    soma = 0
+    for i in range(10):
+        num = int(input("Digite um numero: "))
+        soma = soma + num
+    media = soma / 10
+    print('Média aritmética: ', str(media))
+
+def Exercicio_14(fah):
+    celsius = (5*(fah - 32))/9
+    print('\nA temperatura em Celsius é: ', str(celsius))
+
+def main():
+    Exercicio_8(4.85)
+    Exercicio_8(5.5)
+    Exercicio_8(16)
+    Exercicio_11()
+    Exercicio_12()
+    Exercicio_14(232)
+
+if __name__ == '__main__':
+    main()
