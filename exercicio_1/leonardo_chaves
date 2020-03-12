@@ -1,0 +1,55 @@
+
+
+def exercicio_8(valor):
+    fr = valor % 1
+    inte = valor - fr
+    print('Parte inteira ',inte, 'parte fracionaria ', fr)
+   
+
+def exercicio_11():
+   
+    peso_max = 0
+    num_max = ""
+
+    for i in range(50):
+        num = input('insira o numero do boi: ')
+        peso = float(input('insira o peso do boi: '))
+       
+        if peso > peso_max:
+            peso_max = peso
+            num_max = num
+           
+    print('O Boi mais pesado: ', num_max, 'com :', peso_max)
+
+   
+def exercicio_12():
+   
+    media = []
+   
+    for i in range(10):
+        num = float(input('Insira um numero \n'))
+        media.append(num)
+   
+    avg = sum(media) / len(media)
+    print('A media e: ', avg)
+
+
+def exercicio_14(valor_fah):
+   
+    c =  5 * (valor_fah - 32) / 9
+    print('A temp em ', round(c,2), " graus celsius")
+
+
+def main():
+    exercicio_8(4.85)
+    exercicio_8(5.5)
+    exercicio_8(16)
+    exercicio_11()
+    exercicio_12()
+    exercicio_14(232)
+    exercicio_14(18.33)
+    exercicio_14(-150)
+
+
+if __name__ == '__main__':
+    main()
