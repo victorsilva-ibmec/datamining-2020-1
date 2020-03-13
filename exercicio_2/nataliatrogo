@@ -1,0 +1,44 @@
+#Exercícios para casa de Python. Números 8,11,12 e 14.
+
+print("Exercício 8:") #Ler um número real e dividi-lo em parte inteira e parte fracionária.
+
+num = float(input("Insira um número real: "))
+#O valor que o usuário fornece e que será retornada pelo input() é sempre um string e não um número. Antes de fazer a conta, precisamos converter para float.
+
+parte_int = int(num)
+
+# Para usar só dois dígitos decimais, usar round(número,num de decimais)
+parte_fr = round(float(num) - parte_int,2)
+
+
+print("A parte inteira é", parte_int," e a parte fracionária é ", parte_fr,'\n')
+
+
+#Exercício 11:Em um frigorífico existem 50 bois. Cada boi traz preso no pescoço um cartão contendo seu número de identificação e o peso. Elaborar um algoritmo para ler os dados de todos os bois e escrever somente o número e o peso do boi mais gordo. Admitir que todos os bois têm pesos diferentes.
+
+
+#num_bois = 50
+#cart_identif = input("Insira o Cartão de Visitação")
+
+print("Exercício 12:") #Elaborar um algoritmo para ler dez números e calcular a média aritmética dos números.
+
+num1 = float(input("Insira o primeiro número: "))
+num2 = float(input("Agora insira os próximos, apertando enter em seguida: "))
+num3 = float(input("->"))
+num4 = float(input("->"))
+num5 = float(input("->"))
+num6 = float(input("->"))
+num7 = float(input("->"))
+num8 = float(input("->"))
+num9 = float(input("->"))
+num10 = float(input("->"))
+
+media = ((num1+num2+num3+num4+num5+num6+num7+num8+num9+num10)/10)
+print("A média dos números inseridos é: ", media,'\n')
+
+print("Exercício 14:") #Elaborar um algoritmo para converter uma temperatura apresentada em Fahrenheits para Celsius. A conversão é definida pela fórmula: 𝐶 = 5 ∗ (𝐹 − 32)/9
+
+temp_far = input("Insira a temperatura, em Fahrenheit, que deseja conveter para Celsius: ")
+temp_cels = (5*(float(temp_far)-32))/9
+
+print("A temperatura ", temp_far,"°F"," equivale a ",round(temp_cels,2),"°C",'\n')
