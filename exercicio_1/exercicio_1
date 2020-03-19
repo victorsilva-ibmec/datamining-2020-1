@@ -1,0 +1,59 @@
+def exercicio_8(valor):
+  
+  valor = float(valor)
+  valorint = int(valor)
+  valorfrac = float(valor - valorint)
+
+
+  print('o valor inteiro é',valorint)
+  print('o valor fracionado é',valorfrac)
+  
+def exercicio_11():
+  boi = 1
+  idd0=0
+  peso0=0;
+
+  while(boi<=50):
+    idd = int(input('código do boi'))
+    peso= float(input('peso do boi'))
+    if(peso>peso0):
+     peso0 = peso
+     idd0 = idd
+     boi = boi + 1
+    else:
+     boi = boi + 1
+
+  print('id',idd0)
+  print('peso',peso0)
+
+
+
+def exercicio_12():
+  i=1;
+  i1=0;
+  while(i<=10):
+    i2 = float(input('qual é o valor'))
+    i1 = i2 + i1
+  print('',i1)
+
+def exercicio_14(valor_fah):
+  fah = float(valor_fah)
+  cel = 5 * (fah - 32)/9
+
+  
+  print('',cel)
+
+
+def main():
+    exercicio_8(4.85)
+    exercicio_8(5.5)
+    exercicio_8(16)
+    exercicio_11()
+    exercicio_12()
+    exercicio_14(232)
+    exercicio_14(18.33)
+    exercicio_14(-150)
+
+
+if __name__ == '__main__':
+    main()
