@@ -1,0 +1,95 @@
+"""Template para os exercicios 3, 5, 12, 18 e 21 da Aula 04."""
+
+
+def exercicio_3(peso):
+    if peso > 50:
+        excesso = peso - 50
+        multa = excesso * 4
+        print('A quantidade excedente de peixe é:', excesso, 'e o valor da multa será:', multa)
+    elif peso < 0:
+        print('A quantidade de peixe pescado precisa ser maior que zero.')
+    else:
+        print('A quantidade de peixe é menor que o limite.')
+
+
+def teto(valor):
+    # função utilizada para dar como resultado o teto de um numero
+    teto = 1
+    while teto < valor:
+        teto += 1
+    return teto
+
+
+def exercicio_5(area_pintura):
+    preco_lata = 80
+    vol_lata = 18
+    vol_tinta = teto(area_pintura / 3) # retorna o vol de tinta arredondado para cima
+    qtde_lata = teto(vol_tinta / vol_lata) # retorna o numero de latas arredondado para cima
+    preco_total = qtde_lata * preco_lata
+    print('Para pintar a area indicada é necessário', qtde_lata, 'latas de tinta, com um preco total de :', preco_total,
+          'reais')
+
+def exercicio_12(a, b, c):
+    import math
+    import cmath
+    delta = b**2 - 4 * a * c
+    if delta >= 0:
+        raiz_delta = math.sqrt(delta)
+        prim_raiz = (-b + raiz_delta)/(2*a)
+        seg_raiz = (-b - raiz_delta)/(2*a)
+        print('As raizes são:',prim_raiz,',',seg_raiz)
+    else:
+        raiz_delta = complex(0,math.sqrt(-delta))
+        prim_raiz = (-b + raiz_delta)/(2*a)
+        seg_raiz = (-b - raiz_delta)/(2*a)
+        print('As raízes são:',prim_raiz,'e',seg_raiz)
+
+def exercicio_18(termo_n):
+    f_n = [1,1]
+    if termo_n == 1 or termo_n == 0:
+        print(f_n)
+    else:
+        for i in range(termo_n):
+            novo_f = f_n[-1] + f_n[-2]
+            f_n.append(novo_f)
+        print(f_n)
+
+
+def exercicio_21(total_eleitores):
+    cand_1 = 0
+    cand_2 = 0
+    cand_3 = 0
+    for i in range(total_eleitores):
+        voto = int(input('Por favor, digite 1 para votar no primeiro candidato, 2 no segundo e 3 no terceiro.\n'))
+        if voto == 1:
+            cand_1 += 1
+        elif voto == 2:
+            cand_2 += 1
+        elif voto == 3:
+            cand_3 += 1
+        else:
+            voto=int(input('O voto será anulado.Para confirmar digite 1 para votar novamente digite qualquer numero diferente de 1.\n'))
+            if voto == 1:
+                print('Voto anulado.')
+            else:
+                continue
+    print('O primeiro candidato teve', cand_1, 'votos.O segundo teve',cand_2,'votos e o terceiro candidato teve',cand_3,'votos')
+
+def main():
+    exercicio_3(-10)
+    exercicio_3(4.25)
+    exercicio_3(62.8)
+    exercicio_5(54)
+    exercicio_5(63.9)
+    exercicio_5(25)
+    exercicio_12(1, 0, 0)
+    exercicio_12(5, 2, 0)
+    exercicio_12(2, 4, 6)
+    exercicio_18(4)
+    exercicio_18(8)
+    exercicio_21(5)
+    exercicio_21(20)
+
+
+if __name__ == '__main__':
+    main()
