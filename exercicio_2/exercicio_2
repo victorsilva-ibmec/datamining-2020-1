@@ -1,0 +1,96 @@
+def exercicio_3(peso):
+  if(peso>50):
+    excesso = (peso - 50)
+    multa = int(excesso) * 4
+    print('O peso em excesso é',excesso)
+    print('A multa que deve ser paga é R$',multa)
+  elif(peso<50 and peso>0):
+    print('Peso dentro do regulamento')
+  else:
+    print('não existe peso negativo, digite novamente')
+
+def exercicio_5(area_pintura):
+  tinta_usada = area_pintura/3
+  latas= tinta_usada/18
+  latasint=int(latas)
+  latasfloat=float(latas)
+  
+  if(tinta_usada<=18):
+    
+    print('a quantidade de latas é 1')
+    print('o preço é R$ 80,00')
+
+  else:
+
+    if(latasfloat-latasint==0.0):
+      preco=latasint * 80
+      print('a quantidade de latas é',latasint)
+      print('o preço a pagar é R$',preco)
+
+    else:
+      latasint = latasint + 1
+      preco = latasint * 80
+      print('a quantidade de latas é',latasint)
+      print('o preço a pagar é R$',preco)
+
+
+def exercicio_12(a, b, c):
+  import math   
+  delta = b*b-4*a*c
+  if(delta >= 0):
+    raiz1 = (-b - math.sqrt(((b*b)-4*a*c)))/(2*a)
+    raiz2 = (-b + math.sqrt(((b*b)-4*a*c)))/(2*a)
+    print('Primeira raiz é',raiz1)
+    print('Segunda raiz',raiz2)
+  else:
+    print("Raizes complexas")
+
+def exercicio_18(termo_n):
+    print('')
+
+
+def exercicio_21(total_eleitores):
+  cand1 = 0
+  cand2 = 0
+  cand3 = 0
+  branco = 0
+
+  while(total_eleitores>0):
+    voto = int(input("Voce deseja votar no candidato 1, 2 ou 3"))
+
+    if(voto == 1):
+      cand1 = cand1 + 1
+    elif(voto == 2):
+      cand2 = cand2 + 1
+    elif(voto == 3):
+      cand3 = cand3 + 1
+    else:
+      branco = branco + 1
+
+    total_eleitores = total_eleitores - 1
+
+  print("votos do candidato 1",cand1)
+  print("votos do candidato 2",cand2)
+  print("votos do candidato 3",cand3)
+  print("brancos e nulos",branco)
+
+
+
+def main():
+    exercicio_3(-10)
+    exercicio_3(4.25)
+    exercicio_3(62.8)
+    exercicio_5(54)
+    exercicio_5(63.9)
+    exercicio_5(25)
+    exercicio_12(1, 0, 0)
+    exercicio_12(5, 2, 0)
+    exercicio_12(2, 4, 6)
+    exercicio_18(4)
+    exercicio_18(8)
+    exercicio_21(5)
+    exercicio_21(20)
+    
+
+if __name__ == '__main__':
+    main()
