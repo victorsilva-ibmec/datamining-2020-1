@@ -1,0 +1,109 @@
+
+def exercicio_3(peso):
+        
+    if peso < 0 :
+        print("Peso inserido errado, tente novamente")
+ 
+    
+    elif peso > 50:
+        excesso = peso - 50
+        multa = excesso * 4
+        print('Pescou um total de {}, gerando uma multa de ${}'.format(peso, round(multa,2)))
+    
+    else:
+        print('Nao tem multa, pescou apenas {}'.format(peso))
+    
+    
+
+def exercicio_5(area_pintura):
+    
+    litros = area_pintura / 3
+    latas = litros / 18
+    
+    resto = latas % 1
+    
+    if resto > 0:
+        latas = latas - resto + 1
+        
+    custo = latas * 80
+    
+    print ("O custo sera de ${}, por {} latas de tinta".format(custo, latas))    
+    
+
+def exercicio_12(a, b, c):
+    
+    delta_1 = (-b + (b**2 - 4 * a * c)**(1 / 2)) / (2 * a)
+    delta_2 = (-b - (b**2 - 4 * a * c)**(1 / 2)) / (2 * a)
+    
+    print('As raizes sao {}, {}'.format(delta_1, delta_2))
+
+
+def exercicio_18(termo_n):
+    
+    numeros = []
+    n1, n2 = 0, 1
+    
+    for i in range(termo_n):
+      
+       numeros.append(n1)
+       nth = n1 + n2
+       n1 = n2 
+       n2 = nth
+               
+    print("A sequencia e: ", numeros)   
+    
+    
+def exercicio_21(total_eleitores):
+    joao = 0
+    ronaldinho = 0
+    arroz = 0
+    
+    for i in range(total_eleitores):
+        voto = 0
+        while True:
+            voto = int(input("Para votar em joao das neves disque 000, para ronaldinho disque 171, para arroz 111 \n"))
+            if voto == 171 or voto == 111 or voto == 000:
+                break
+            else:
+                print("Voto invalido, digite novamente")
+                
+        if voto == 000:
+            joao = joao +1
+        
+        elif voto == 171:
+            ronaldinho = ronaldinho +1
+       
+        else:
+            arroz = arroz + 1
+            
+    if (arroz > ronaldinho) and (arroz > joao):
+        total = arroz / total_eleitores *100
+        print("arroz ganhou com {}% dos votos".format(total)) 
+    
+    elif (arroz < ronaldinho) and (ronaldinho > joao):
+        total = ronaldinho / total_eleitores *100
+        print("ronaldinho ganhou com {}% dos votos".format(total))
+        
+    else:
+        total = joao / total_eleitores *100
+        print("joao das neves ganhou com {}% dos votos".format(total))
+        
+def main():
+    
+    exercicio_3(-10)
+    exercicio_3(4.25)
+    exercicio_3(62.8)
+    exercicio_5(54)
+    exercicio_5(63.9)
+    exercicio_5(25)
+    exercicio_12(1, 0, 0)
+    exercicio_12(5, 2, 0)
+    exercicio_12(2, 4, 6)
+    exercicio_18(4)
+    exercicio_18(8)
+    exercicio_21(5)
+    exercicio_21(20)
+    
+
+if __name__ == '__main__':
+    main()
