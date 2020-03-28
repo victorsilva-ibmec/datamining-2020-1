@@ -1,0 +1,16 @@
+PRAZO: 03/04/2020
+MÉTODO DE ENVIO: pull request no Github
+
+- Alterar o arquivo notas.py para implementar a função procura_aluno(nome), que busca o índice da lista alunos que tenha o valor nome (passado como argumento).
+- Fazer os exercícios 10, 12 e 14 da lista do dia 27/03/20:
+
+10. Faça um Programa que leia dois vetores com 10 elementos cada. Gere um terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos elementos intercalados dos dois outros vetores.
+12. Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
+14. Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
+• Mostre a quantidade de valores que foram lidos;
+• Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+• Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+• Calcule e mostre a soma dos valores;
+• Calcule e mostre a média dos valores;
+• Calcule e mostre a quantidade de valores acima da média calculada;
+• Encerre o programa com uma mensagem.
