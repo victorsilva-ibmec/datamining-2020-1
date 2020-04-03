@@ -1,0 +1,77 @@
+
+
+alunos = ['Ola', 'Mundo']
+
+def procura_aluno(aluno):
+    if aluno in alunos:
+        print('O aluno procurado está na posição {}.'.format(alunos.index(aluno)))
+    else:
+        print('Não existe esse aluno')
+        
+        
+        
+def ex_10():
+    lst1 = []
+    lst2 = []
+    lst3 = []
+    
+    for i in range(2):
+        for x in range(10):
+            dados = int(input("Insira o valor {} do vetor {}:".format(x+1,i+1)))
+            if i == 0:
+                lst1.append(dados)
+            else:
+                lst2.append(dados)
+    
+    for i in range(10):
+        lst3.append(lst1[i])
+        lst3.append(lst2[i])
+    
+    
+def ex_12():
+     temp = []
+     meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho',
+              'Agosto','Setembro','Outubro','Novembro','Dezembro']
+     for i in range(12):
+         temp_mensal = int(input("Insira a temperatura media mensal do mes {} ".format(meses[i])))
+         temp.append(temp_mensal)
+     temp_media = sum(temp) / len(temp)
+    
+     for i,t in enumerate(temp):
+        if t > temp_media:
+            print(f"A temperatura do mes {meses[i]} foi acima da media, com um valor de {temp[i]}.")
+        
+
+def ex_14():
+    notas = []
+    while True:
+        nota = float(input("Insira a nota: (Insira -1 para parar) "))
+        if nota == -1 :
+            break
+        notas.append(nota)
+    
+    print("Foram inseridos {} valores".format(len(notas)))
+    print("Foram inseridos os seguintes valores \n", notas )
+    print("Valores ao contrario ")
+    
+    for i in range(len(notas)):
+        print(notas[-i])
+        
+    print("A soma das notas e: ",sum(notas))   
+    media = sum(notas)/len(notas)
+    print("A media das notas e: ", media)
+    x = 0
+    for i in notas:
+        if i > media:
+           x += 1
+    print("Tiveram {} notas acima da media.".format(x))
+           
+
+def main():
+    ex_10()
+    ex_12()    
+    ex_14()
+
+
+if __name__ == '__main__':
+    main()    
