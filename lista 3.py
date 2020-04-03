@@ -1,6 +1,5 @@
-def procura_aluno():
-    '''Busca o índice aa lista alunos que tenha o valor nome.'''
-    nome = input('Informe o nome do aluno a ser procurado: ')
+def procura_aluno(nome):
+    '''Busca o índice na lista alunos que tenha o valor nome.'''
     if nome in alunos:
         print(f'O aluno procurado está na posição {alunos.index(nome)}.')
     else:
@@ -11,14 +10,14 @@ def ex_10():
     lst1 = []
     lst2 = []
     lst3 = []
-    for i in range(3):
+    for i in range(10):
         valor1 = int(input('Insira um valor para a primeira lista: '))
         lst1.append(valor1)
         valor2 = int(input('Insira um valor para a segunda lista: '))
         lst2.append(valor2)
     print(lst1)
     print(lst2)
-    for i in range(3):
+    for i in range(10):
         lst3.append(lst1[i])
         lst3.append(lst2[i])
     print(lst3)
